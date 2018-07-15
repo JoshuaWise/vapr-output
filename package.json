@@ -1,0 +1,37 @@
+{
+  "name": "vapr-output",
+  "version": "0.1.0",
+  "description": "A Vapr plugin for negotiating and serializing responses",
+  "main": "lib/index.js",
+  "dependencies": {
+    "negotiated": "^1.0.0",
+    "vary": "^1.1.2"
+  },
+  "peerDependencies": {
+    "vapr": "^0.5.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "$(npm bin)/mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaWise/vapr-output.git"
+  },
+  "keywords": [
+    "vapr",
+    "plugin",
+    "middleware",
+    "accept",
+    "accept-charset"
+  ],
+  "author": "Joshua Wise <joshuathomaswise@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoshuaWise/vapr-output/issues"
+  },
+  "homepage": "https://github.com/JoshuaWise/vapr-output#readme"
+}
