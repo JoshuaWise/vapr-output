@@ -26,7 +26,6 @@
     "plugin",
     "middleware",
     "accept",
-    "accept-charset"
   ],
   "author": "Joshua Wise <joshuathomaswise@gmail.com>",
   "license": "MIT",
