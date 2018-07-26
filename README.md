@@ -11,6 +11,8 @@ npm install --save vapr-output
 
 This plugin is used to define which *media types* can be sent in outgoing response bodies. It performs [content negotiation](https://tools.ietf.org/html/rfc7231#section-3.4), ensuring that each client receives the best available media type. It also handles serialization, enabling you to use any object as a response body instead of just strings or Buffers.
 
+When a request is received without an Accept header, the first declared media type will be used.
+
 ```js
 const output = require('vapr-output');
 const app = require('vapr')();
@@ -25,8 +27,6 @@ route.use((req) => {
   return [[{ foo: 'bar' }]]; // Some serializable data
 });
 ```
-
-> When a request is received without an Accept header, the first declared media type will be used.
 
 ## Options
 
