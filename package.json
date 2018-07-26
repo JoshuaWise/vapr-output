@@ -25,7 +25,7 @@
     "vapr",
     "plugin",
     "middleware",
-    "accept",
+    "accept"
   ],
   "author": "Joshua Wise <joshuathomaswise@gmail.com>",
   "license": "MIT",
