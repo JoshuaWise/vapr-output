@@ -25,6 +25,7 @@
     "vapr",
     "plugin",
     "middleware",
+    "content-type",
     "accept"
   ],
   "author": "Joshua Wise <joshuathomaswise@gmail.com>",
