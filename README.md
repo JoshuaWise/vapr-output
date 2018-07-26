@@ -30,10 +30,7 @@ The order in which you declare each media type indicates their precedence, shoul
 
 ## Options
 
-### options.encodeNull = *false*
-### options.encodeUndefined = *false*
-
-By default, response bodies of `null` or `undefined` will not be serialized and will not be assigned a Content-Type, because they represent "no data". For example, `undefined` bodies are typically used for `204` or `400` responses. However, if `encodeNull` or `encodeUndefined` is `true`, response bodies of `null` or `undefined` will not be skipped (respectively).
+Response bodies of `null` or `undefined` will not be serialized and will not be assigned a Content-Type, because they represent "no data". For example, `undefined` bodies are typically used for `204` or `400` responses. However, if you want to treat `null` or `undefined` the same as any other value, you can use the `encodeUndefined` and/or `encodeNull` options.
 
 ```js
 route.use(output({
@@ -43,9 +40,7 @@ route.use(output({
 }));
 ```
 
-### options.strictParameters = *false*
-
-By default, media parameters are negotiated in a case-insensitive manner. This is usually desirable because the most common parameters (e.g., `charset`) are case-insensitive. However, if you're using media parameters that are case-sensitive, you can accommodate them by setting `strictParameters` to `true`.
+Media parameters are negotiated in a case-insensitive manner because many common parameters (e.g., `charset`) are case-insensitive. If you're using media parameters that are case-sensitive, you can reverse this behavior by setting the `strictParameters` option.
 
 ```js
 route.use(output({
@@ -54,9 +49,7 @@ route.use(output({
 }));
 ```
 
-### options.forced = *false*
-
-This option is used to bypass content negotiation. It cannot be used when multiple media types are declared.
+Sometimes you may wish to bypass content negotiation altogether. You can do this by setting the `forced` option.
 
 ```js
 route.use(output({
