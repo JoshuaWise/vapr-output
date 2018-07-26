@@ -45,7 +45,7 @@ route.use(output({
 
 ### options.strictParameters = *false*
 
-By default, media parameters are negotiated in a case-insensitive manner. This is usually desirable because the most common parameters (such as `charset`) are case-insensitive. However, if you're using media parameters that are case-sensitive, you can accommodate them by setting `strictParameters` to `true`.
+By default, media parameters are negotiated in a case-insensitive manner. This is usually desirable because the most common parameters (e.g., `charset`) are case-insensitive. However, if you're using media parameters that are case-sensitive, you can accommodate them by setting `strictParameters` to `true`.
 
 ```js
 route.use(output({
