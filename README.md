@@ -9,7 +9,7 @@ npm install --save vapr-output
 
 ## Usage
 
-This plugin is used to define which *media types* can be sent in outgoing response bodies. It performs [content negotiation](https://tools.ietf.org/html/rfc7231#section-3.4), ensuring that each client receives the best available media type. It also handles serialization, so you can use any object as a response body instead of just strings or Buffers.
+This plugin is used to define which *media types* can be sent in outgoing response bodies. It performs [content negotiation](https://tools.ietf.org/html/rfc7231#section-3.4), ensuring that each client receives the best available media type. It also handles serialization, enabling you to use any object as a response body instead of just strings or Buffers.
 
 ```js
 const output = require('vapr-output');
