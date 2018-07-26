@@ -26,7 +26,7 @@ route.use((req) => {
 });
 ```
 
-The order in which you declare each media type indicates their preference levels, should the client have no preference. When a request is received without an Accept header, the first declared media type will be used.
+The order in which you declare each media type indicates their precedence, should the client have no preference. When a request is received without an Accept header, the first declared media type will be used.
 
 ## Options
 
