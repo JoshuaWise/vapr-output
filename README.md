@@ -50,7 +50,7 @@ By default, media parameters are negotiated in a case-insensitive manner. This i
 ```js
 route.use(output({
   'strictParameters': true,
-  'application/foo; some-strange-parameter=hello': serializeData,
+  'application/foo; some-strange-parameter=hello': serializationFunction,
 }));
 ```
 
