@@ -1,6 +1,6 @@
 {
   "name": "vapr-output",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A Vapr plugin for negotiating and serializing responses",
   "main": "lib/index.js",
   "dependencies": {
