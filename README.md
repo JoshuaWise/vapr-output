@@ -26,7 +26,7 @@ route.use((req) => {
 });
 ```
 
-> If a request is received without the Accept header, the first declared media type will be used.
+> If a request is received without the Accept header, the first declared media type is used.
 
 ## Options
 
