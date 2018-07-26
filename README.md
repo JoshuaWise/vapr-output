@@ -33,7 +33,7 @@ The order in which you declare each media type indicates their precedence, shoul
 ### options.encodeNull = *false*
 ### options.encodeUndefined = *false*
 
-By default, response bodies of `null` or `undefined` will not be serialized and will not be assigned a Content-Type because they represent "no data". For example, `undefined` bodies are typically used for `204` or `400` responses. However, if `encodeNull` or `encodeUndefined` is `true`, response bodies of `null` or `undefined` will not be skipped (respectively).
+By default, response bodies of `null` or `undefined` will not be serialized and will not be assigned a Content-Type, because they represent "no data". For example, `undefined` bodies are typically used for `204` or `400` responses. However, if `encodeNull` or `encodeUndefined` is `true`, response bodies of `null` or `undefined` will not be skipped (respectively).
 
 ```js
 route.use(output({
