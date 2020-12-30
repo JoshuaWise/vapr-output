@@ -18,7 +18,7 @@ const route = app.get('/foo');
 
 route.use(output({
   'application/json': body => JSON.stringify(body),
-  'application/xml': body => encodeAsXML(body),
+  'application/xml': body => stringifyXML(body),
 }));
 
 route.use((req) => {
