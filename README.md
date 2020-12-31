@@ -28,6 +28,8 @@ route.use((req) => {
 
 The order in which you declare each media type indicates their precedence, should the client have no preference. When a request is received without an Accept header, the first declared media type will be used. If someone sends an Accept header but there are no acceptable media types available, they'll receive a `406` response.
 
+If more than one media type is declared, the Vary header is automatically updated to make caches aware of the content negotiation.
+
 ## Options
 
 Response bodies of `null` or `undefined` will not be serialized and will not be assigned a Content-Type, because they represent "no data". For example, `undefined` bodies are typically used for `204` or `400` responses. However, if you want to treat `null` or `undefined` the same as any other value, you can use the `encodeUndefined` and/or `encodeNull` options.
