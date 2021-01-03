@@ -59,3 +59,13 @@ route.use(output({
   'text/plain; charset=utf-8': String,
 }));
 ```
+
+## Remarks
+
+Although the [HTTP specification](https://tools.ietf.org/html/rfc7231#section-5.3.3) defines an Accept-Charset header for negotiating character sets of textual content, it has become obsolete in practice. It turns out that the Accept header (handled by this plugin) is fully capable of negotiating character sets. In fact, the Accept header is able to be more specific than the Accept-Charset header because it can specify different character sets for each acceptable media type. Furthermore, nearly all web technologies have converged on simply using the UTF-8 character set for all textual content.
+
+For all of these reasons, all major browsers have stopped sending the Accept-Charset header, and it's *not recommended* for servers to respect it anymore. Clients and servers alike should soley rely on the Accept header for negotiating character sets, or simply assume that UTF-8 will be used. Without following these recommendations, situations can occur where the Accept and Accept-Charset headers disagree with each other or introduce ambiguity.
+
+References:
+ - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Charset
+ - https://hsivonen.fi/accept-charset/
